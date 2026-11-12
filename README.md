@@ -76,6 +76,7 @@ aws-budget-alerts/
 ├── variables.tf    # Email, monthly limit, region, project name
 ├── outputs.tf      # Budget name and limit
 ├── providers.tf    # Provider versions and S3 remote backend
+  ├── .github/workflows/terraform-ci.yml   # Runs fmt and validate on every pull request
 └── README.md
 ```
 
