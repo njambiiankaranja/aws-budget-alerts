@@ -72,11 +72,11 @@ Alerts go straight to your email address through AWS Budgets, so there is no ext
 
 ```text
 aws-budget-alerts/
-├── main.tf         # Monthly cost budget and notifications
-├── variables.tf    # Email, monthly limit, region, project name
-├── outputs.tf      # Budget name and limit
-├── providers.tf    # Provider versions and S3 remote backend
-  ├── .github/workflows/terraform-ci.yml   # Runs fmt and validate on every pull request
+├── .github/workflows/terraform-ci.yml   # Runs fmt and validate on every pull request
+├── main.tf                              # Monthly cost budget and notifications
+├── variables.tf                         # Email, monthly limit, region, project name
+├── outputs.tf                           # Budget name and limit
+├── providers.tf                         # Provider versions and S3 remote backend
 └── README.md
 ```
 
@@ -118,4 +118,3 @@ This removes the budget and its alerts, so only run it if you no longer want the
 - Add a budget per service, such as EC2 or data transfer, with its own thresholds
 - Send alerts to an SNS topic so they reach Slack or a phone as well as email
 - Add AWS Budgets actions that apply a restrictive policy when the limit is passed
-- Add a GitHub Actions workflow that runs `terraform fmt` and `validate` on every pull request
